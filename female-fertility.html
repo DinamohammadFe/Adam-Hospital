@@ -8,6 +8,9 @@
       content="Female fertility diagnosis and treatments at Adam International Hospital. Expert care for female infertility issues."
     />
     <title>Female Fertility - Adam International Hospital</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
+    <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/FHB1SY09/adam.png" />
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -68,9 +71,6 @@
                 Treatments
               </a>
               <ul class="dropdown-menu" aria-labelledby="treatmentsDropdown">
-                <li>
-  
-                </li>
                 <li class="nav-item dropdown">
                   <a
                     class="dropdown-item dropdown-toggle"
@@ -83,7 +83,7 @@
                     IVF
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="ivfDropdown">
-                    <li><a class="dropdown-item" href="#">Basics</a></li>
+                    <li><a class="dropdown-item" href="ivf-basics.html">Basics</a></li>
                     <li>
                       <a class="dropdown-item" href="#">When to Consider IVF</a>
                     </li>
@@ -164,12 +164,12 @@
                     aria-labelledby="maleFertilityDropdown"
                   >
                     <li>
-                      <a class="dropdown-item" href="#"
+                      <a class="dropdown-item" href="male-fertility.html"
                         >Male Fertility Diagnosis</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#"
+                      <a class="dropdown-item" href="male-fertility-treatments.html"
                         >Male Fertility Treatments</a
                       >
                     </li>
@@ -412,7 +412,7 @@
 
       <div class="accordion-content">
         <nav class="accordion-nav">
-          <a href="Home.html" class="accordion-link">Home</a>
+          <a href="#" class="accordion-link">Home</a>
 
           <div class="accordion-item">
             <button class="accordion-toggle" data-target="aboutAccordion">
@@ -422,7 +422,9 @@
             <div class="accordion-panel" id="aboutAccordion">
               <a href="#" class="accordion-sublink">Who We Are</a>
               <a href="#" class="accordion-sublink">Meet the Team</a>
-              <a href="#" class="accordion-sublink">Our Advanced Fertility Lab</a>
+              <a href="#" class="accordion-sublink"
+                >Our Advanced Fertility Lab</a
+              >
               <a href="#" class="accordion-sublink">Success Stories</a>
               <a href="#" class="accordion-sublink">News</a>
             </div>
@@ -434,12 +436,27 @@
               <span class="chevron">&#8250;</span>
             </button>
             <div class="accordion-panel" id="treatmentsAccordion">
-
-              <a href="#" class="accordion-sublink">IVF</a>
+              <div class="accordion-item">
+                <button class="accordion-toggle" data-target="ivfAccordion">
+                  <span>IVF</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="ivfAccordion">
+                  <a href="ivf-basics.html" class="accordion-sublink">Basics</a>
+                  <a href="#" class="accordion-sublink">When to Consider IVF</a>
+                  <a href="#" class="accordion-sublink"
+                    >IVF Treatment Process</a
+                  >
+                </div>
+              </div>
 
               <a href="#" class="accordion-sublink">IVF Genetic Testing</a>
               <a href="#" class="accordion-sublink">PCOS</a>
               <a href="#" class="accordion-sublink">Endometriosis</a>
+              <a href="#" class="accordion-sublink">Tubal Reversal</a>
+              <a href="#" class="accordion-sublink">Sex Selection</a>
+              <a href="#" class="accordion-sublink">Gyn Surgery</a>
+              <a href="#" class="accordion-sublink">TESE</a>
             </div>
           </div>
 
@@ -449,16 +466,76 @@
               <span class="chevron">&#8250;</span>
             </button>
             <div class="accordion-panel" id="servicesAccordion">
-              <a href="female-fertility.html" class="accordion-sublink">Female Fertility</a>
-              <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
-              <a href="#" class="accordion-sublink">Egg Freezing / Embryo Freezing</a>
+              <div class="accordion-item">
+                <button
+                  class="accordion-toggle"
+                  data-target="femaleFertilityAccordion"
+                >
+                  <span>Female Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="femaleFertilityAccordion">
+                  <a href="female-fertility.html" class="accordion-sublink"
+                    >Female Fertility Diagnosis</a
+                  >
+                  <a
+                    href="female-fertility-treatments.html"
+                    class="accordion-sublink"
+                    >Female Fertility Treatments</a
+                  >
+                  <a href="#" class="accordion-sublink">Egg Freezing</a>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a
+                  href="male-fertility.html"
+                  class="accordion-toggle"
+                  style="text-decoration: none; color: inherit"
+                >
+                  <span>Male Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </a>
+                <div class="accordion-panel" id="maleFertilityAccordion">
+                  <a href="male-fertility.html" class="accordion-sublink"
+                    >Male Fertility Diagnosis</a
+                  >
+                  <a href="male-fertility.html" class="accordion-sublink"
+                    >Male Fertility Treatments</a
+                  >
+                </div>
+              </div>
+              <a href="#" class="accordion-sublink"
+                >Egg Freezing / Embryo Freezing</a
+              >
             </div>
           </div>
 
           <a href="#" class="accordion-link">Patient Portal</a>
+          <a href="#" class="accordion-link">Contact</a>
+          <a href="#" class="accordion-link">Appointments</a>
         </nav>
+
+        <div class="accordion-footer">
+          <button class="accordion-btn book-btn">Book Appointment</button>
+          <div class="accordion-controls">
+            <button class="btn accordion-theme-toggle" id="accordionThemeToggle">
+              <span class="theme-icon">🌙</span>
+            </button>
+            <button class="btn accordion-lang-toggle">AR</button>
+          </div>
+          <p class="accordion-contact">
+            Call us: <a href="tel:19662">19662</a>
+          </p>
+        </div>
       </div>
     </div>
+
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle" id="menuToggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,27 +1,7 @@
-// Select all slides and the dots container
-const slides = document.querySelectorAll(".slide");
-const dotsContainer = document.querySelector(".dots");
-let currentSlide = 0;
-
-// Theme toggle functionality
-const themeToggle = document.getElementById("themeToggle");
-const themeIcon = document.querySelector(".theme-icon");
-const body = document.body;
-
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem("theme") || "light";
-body.setAttribute("data-theme", currentTheme);
-themeIcon.textContent = currentTheme === "dark" ? "☀️" : "🌙";
-
-// Theme toggle event listener
-themeToggle.addEventListener("click", () => {
-  const currentTheme = body.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-  body.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-  themeIcon.textContent = newTheme === "dark" ? "☀️" : "🌙";
-});
+// Variables will be initialized in DOMContentLoaded
+let slides,
+  dotsContainer,
+  currentSlide = 0;
 
 // Accordion Menu Functionality
 function openAccordionMenu() {
@@ -125,8 +105,16 @@ function initCounters() {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const counter = entry.target;
-        const target = parseFloat(counter.getAttribute("data-target"));
-        animateCounter(counter, target);
+        const targetAttr = counter.getAttribute("data-target");
+        const target = parseFloat(targetAttr);
+
+        // Only animate if we have a valid target
+        if (targetAttr && !isNaN(target)) {
+          animateCounter(counter, target);
+        } else {
+          console.warn("Invalid or missing data-target attribute:", targetAttr);
+          counter.textContent = "0";
+        }
         observer.unobserve(counter);
       }
     });
@@ -138,6 +126,13 @@ function initCounters() {
 }
 
 function animateCounter(element, target) {
+  // Check if target is a valid number
+  if (isNaN(target) || target === null || target === undefined) {
+    console.warn("Invalid target value for counter:", target);
+    element.textContent = "0";
+    return;
+  }
+
   let current = 0;
   const increment = target / 100;
   const duration = 2000; // 2 seconds
@@ -163,6 +158,72 @@ function animateCounter(element, target) {
 
 // Event Listeners
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize slider elements
+  slides = document.querySelectorAll(".slide");
+  dotsContainer = document.querySelector(".dots");
+
+  // Theme toggle functionality
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.querySelector(".theme-icon");
+  const body = document.body;
+
+  // Check for saved theme preference or default to light mode
+  const currentTheme = localStorage.getItem("theme") || "light";
+  body.setAttribute("data-theme", currentTheme);
+  if (themeIcon) {
+    themeIcon.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+  }
+
+  // Initialize accordion theme toggle icon
+  const accordionThemeIconEl = document.querySelector(
+    ".accordion-theme-toggle .theme-icon"
+  );
+  if (accordionThemeIconEl) {
+    accordionThemeIconEl.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+  }
+
+
+
+  // Theme toggle event listener
+  if (themeToggle && themeIcon) {
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = body.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      body.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      themeIcon.textContent = newTheme === "dark" ? "☀️" : "🌙";
+
+      // Update accordion theme toggle icon if it exists
+      if (accordionThemeIconEl) {
+        accordionThemeIconEl.textContent = newTheme === "dark" ? "☀️" : "🌙";
+      }
+    });
+  }
+
+  // Accordion theme toggle event listener
+  const accordionThemeToggle = document.getElementById("accordionThemeToggle");
+  if (accordionThemeToggle && accordionThemeIconEl) {
+    accordionThemeToggle.addEventListener("click", () => {
+      const currentTheme = body.getAttribute("data-theme");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+      body.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      accordionThemeIconEl.textContent = newTheme === "dark" ? "☀️" : "🌙";
+
+      // Update main theme toggle icon if it exists
+      if (themeIcon) {
+        themeIcon.textContent = newTheme === "dark" ? "☀️" : "🌙";
+      }
+    });
+  }
+
+
+
+  // Initialize slider functionality
+  initializeSlider();
+
   // Initialize counters
   initCounters();
   handleStatsAnimation();
@@ -331,11 +392,13 @@ function initializeChatbot() {
     });
   }
 
-  quickActions.forEach((button) => {
-    button.addEventListener("click", function () {
-      handleQuickAction(this.textContent.trim());
+  if (quickActions && quickActions.length > 0) {
+    quickActions.forEach((button) => {
+      button.addEventListener("click", function () {
+        handleQuickAction(this.textContent.trim());
+      });
     });
-  });
+  }
 
   // Close chatbot when clicking outside
   document.addEventListener("click", function (e) {
@@ -351,19 +414,61 @@ function initializeChatbot() {
   });
 }
 
-// Create navigation dots
-slides.forEach((_, index) => {
-  const dot = document.createElement("button");
-  if (index === 0) dot.classList.add("active");
-  dotsContainer.appendChild(dot);
+// Initialize slider functionality
+function initializeSlider() {
+  // Only initialize if slider elements exist
+  if (!slides || !dotsContainer || slides.length === 0) {
+    return;
+  }
 
-  dot.addEventListener("click", () => {
-    goToSlide(index);
+  // Create navigation dots
+  slides.forEach((_, index) => {
+    const dot = document.createElement("button");
+    if (index === 0) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+
+    dot.addEventListener("click", () => {
+      goToSlide(index);
+    });
   });
-});
+
+  // Auto-slide every 5 seconds
+  setInterval(() => {
+    const nextSlide = (currentSlide + 1) % slides.length;
+    goToSlide(nextSlide);
+  }, 5000);
+
+  // Optional: Add swipe functionality for mobile (touch support)
+  let startX = 0;
+  let endX = 0;
+
+  const sliderContainer = document.querySelector(".slider-container");
+  if (sliderContainer) {
+    sliderContainer.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    sliderContainer.addEventListener("touchend", (e) => {
+      endX = e.changedTouches[0].clientX;
+      if (startX > endX + 50) {
+        // Swipe left
+        const nextSlide = (currentSlide + 1) % slides.length;
+        goToSlide(nextSlide);
+      } else if (startX < endX - 50) {
+        // Swipe right
+        const prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+        goToSlide(prevSlide);
+      }
+    });
+  }
+}
 
 // Function to go to a specific slide
 function goToSlide(index) {
+  if (!slides || !dotsContainer || slides.length === 0) {
+    return;
+  }
+
   slides[currentSlide].classList.remove("active");
   dotsContainer.children[currentSlide].classList.remove("active");
 
@@ -372,34 +477,3 @@ function goToSlide(index) {
   slides[currentSlide].classList.add("active");
   dotsContainer.children[currentSlide].classList.add("active");
 }
-
-// Auto-slide every 5 seconds
-setInterval(() => {
-  const nextSlide = (currentSlide + 1) % slides.length;
-  goToSlide(nextSlide);
-}, 5000);
-
-// Optional: Add swipe functionality for mobile (touch support)
-let startX = 0;
-let endX = 0;
-
-document
-  .querySelector(".slider-container")
-  .addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-document
-  .querySelector(".slider-container")
-  .addEventListener("touchend", (e) => {
-    endX = e.changedTouches[0].clientX;
-    if (startX > endX + 50) {
-      // Swipe left
-      const nextSlide = (currentSlide + 1) % slides.length;
-      goToSlide(nextSlide);
-    } else if (startX < endX - 50) {
-      // Swipe right
-      const prevSlide = (currentSlide - 1 + slides.length) % slides.length;
-      goToSlide(prevSlide);
-    }
-  });

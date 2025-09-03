@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IVF Basics - Adam's Fertility</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Home.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="https://i.postimg.cc/FHB1SY09/adam.png"
+            alt="Logo"
+            class="logo-img me-2"
+          />
+          <span class="brand-text">Adam International Hospital</span>
+        </a>
+
+        <div class="d-none d-lg-flex navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="#">Who We Are</a></li>
+                <li><a class="dropdown-item" href="#">Meet the Team</a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Our Advanced Fertility Lab</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Success Stories</a></li>
+                <li><a class="dropdown-item" href="#">News</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="treatmentsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Treatments
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="treatmentsDropdown">
+                <li class="nav-item dropdown">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    href="#"
+                    id="ivfDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    IVF
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="ivfDropdown">
+                    <li><a class="dropdown-item" href="ivf-basics.html">Basics</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">When to Consider IVF</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >IVF Treatment Process</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">IVF Genetic Testing</a>
+                </li>
+                <li><a class="dropdown-item" href="#">ICSI</a></li>
+                <li><a class="dropdown-item" href="#">Embryo Freezing</a></li>
+                <li><a class="dropdown-item" href="#">PCOS</a></li>
+                <li><a class="dropdown-item" href="#">Endometriosis</a></li>
+                <li><a class="dropdown-item" href="#">Tubal Reversal</a></li>
+                <li><a class="dropdown-item" href="#">Sex Selection</a></li>
+                <li><a class="dropdown-item" href="#">Gyn Surgery</a></li>
+                <li><a class="dropdown-item" href="#">TESE</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li class="nav-item dropdown">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    href="#"
+                    id="femaleFertilityDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Female Fertility
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="femaleFertilityDropdown"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="female-fertility.html"
+                        >Female Fertility Diagnosis</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="female-fertility-treatments.html"
+                        >Female Fertility Treatments</a
+                      >
+                    </li>
+                    <li><a class="dropdown-item" href="#">Egg Freezing</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    href="male-fertility.html"
+                    id="maleFertilityDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Male Fertility
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="maleFertilityDropdown"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="male-fertility.html"
+                        >Male Fertility Diagnosis</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="male-fertility-treatments.html"
+                        >Male Fertility Treatments</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Sperm Freezing</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Egg Freezing / Embryo Freezing</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Patient Portal</a>
+            </li>
+            <li class="nav-item me-2">
+              <button class="btn book-btn">Book an Appointment</button>
+            </li>
+            <li class="nav-item me-2">
+              <button class="btn theme-toggle" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="btn lang-toggle">AR</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Accordion Side Menu -->
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header"></div>
+
+      <div class="accordion-content">
+        <nav class="accordion-nav">
+          <a href="#" class="accordion-link">Home</a>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="aboutAccordion">
+              <span>About Us</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="aboutAccordion">
+              <a href="#" class="accordion-sublink">Who We Are</a>
+              <a href="#" class="accordion-sublink">Meet the Team</a>
+              <a href="#" class="accordion-sublink"
+                >Our Advanced Fertility Lab</a
+              >
+              <a href="#" class="accordion-sublink">Success Stories</a>
+              <a href="#" class="accordion-sublink">News</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="treatmentsAccordion">
+              <span>Treatments</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="treatmentsAccordion">
+              <div class="accordion-item">
+                <button class="accordion-toggle" data-target="ivfAccordion">
+                  <span>IVF</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="ivfAccordion">
+                  <a href="ivf-basics.html" class="accordion-sublink">Basics</a>
+                  <a href="#" class="accordion-sublink">When to Consider IVF</a>
+                  <a href="#" class="accordion-sublink"
+                    >IVF Treatment Process</a
+                  >
+                </div>
+              </div>
+
+              <a href="#" class="accordion-sublink">IVF Genetic Testing</a>
+              <a href="#" class="accordion-sublink">PCOS</a>
+              <a href="#" class="accordion-sublink">Endometriosis</a>
+              <a href="#" class="accordion-sublink">Tubal Reversal</a>
+              <a href="#" class="accordion-sublink">Sex Selection</a>
+              <a href="#" class="accordion-sublink">Gyn Surgery</a>
+              <a href="#" class="accordion-sublink">TESE</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-toggle" data-target="servicesAccordion">
+              <span>Services</span>
+              <span class="chevron">&#8250;</span>
+            </button>
+            <div class="accordion-panel" id="servicesAccordion">
+              <div class="accordion-item">
+                <button
+                  class="accordion-toggle"
+                  data-target="femaleFertilityAccordion"
+                >
+                  <span>Female Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </button>
+                <div class="accordion-panel" id="femaleFertilityAccordion">
+                  <a href="female-fertility.html" class="accordion-sublink"
+                    >Female Fertility Diagnosis</a
+                  >
+                  <a
+                    href="female-fertility-treatments.html"
+                    class="accordion-sublink"
+                    >Female Fertility Treatments</a
+                  >
+                  <a href="#" class="accordion-sublink">Egg Freezing</a>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a
+                  href="male-fertility.html"
+                  class="accordion-toggle"
+                  style="text-decoration: none; color: inherit"
+                >
+                  <span>Male Fertility</span>
+                  <span class="chevron">&#8250;</span>
+                </a>
+                <div class="accordion-panel" id="maleFertilityAccordion">
+                  <a href="male-fertility.html" class="accordion-sublink"
+                    >Male Fertility Diagnosis</a
+                  >
+                  <a href="male-fertility.html" class="accordion-sublink"
+                    >Male Fertility Treatments</a
+                  >
+                </div>
+              </div>
+              <a href="#" class="accordion-sublink"
+                >Egg Freezing / Embryo Freezing</a
+              >
+            </div>
+          </div>
+
+          <a href="#" class="accordion-link">Patient Portal</a>
+          <a href="#" class="accordion-link">Contact</a>
+          <a href="#" class="accordion-link">Appointments</a>
+        </nav>
+
+        <div class="accordion-footer">
+          <button class="accordion-btn book-btn">Book Appointment</button>
+          <div class="accordion-controls">
+            <button class="btn accordion-theme-toggle" id="accordionThemeToggle">
+              <span class="theme-icon">🌙</span>
+            </button>
+            <button class="btn accordion-lang-toggle">AR</button>
+          </div>
+          <p class="accordion-contact">
+            Call us: <a href="tel:19662">19662</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle" id="menuToggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-section"
+      style="
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('https://i.postimg.cc/pXgrS2nb/ivf.jpg')
+            center/cover;
+        padding: 150px 0 100px;
+      "
+    >
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 text-white mb-4">In Vitro Fertilization (IVF)</h1>
+            <p class="lead text-white mb-4">
+              Our team offers some of the highest IVF success rates in the nation.
+            </p>
+            <a href="#content" class="cta-btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="content" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Introduction -->
+            <div class="mb-5">
+              <p class="lead text-center mb-4">
+                Solving the infertility puzzle can be a long, discouraging process. IVF offers renewed hope. Our staff will make every effort to provide you with the personal and compassionate care you need during your treatment.
+              </p>
+            </div>
+
+            <!-- How Does IVF Work Section -->
+            <div class="row align-items-center mb-5">
+              <div class="col-md-6 col-lg-6 mb-4 order-1">
+                <h2 class="mb-4" style="color: #5cb3b3">How Does IVF Work?</h2>
+                <p class="mb-3">
+                  IVF increases the probability of pregnancy by harnessing the body's own reproductive potential. During a typical menstrual cycle, a hormone called FSH (follicle stimulating hormone) signals to your body to release an egg (oocyte) through a follicle.
+                </p>
+                <p class="mb-3">
+                  Typically one egg is released per cycle, but by giving the body more FSH, more of the oocytes can be cultivated in the hope they will generate a fertilized egg, a good embryo, and ultimately a baby.
+                </p>
+              </div>
+              <div class="col-md-6 col-lg-6 mb-4 order-2">
+                <img
+                  src="https://i.postimg.cc/QMFHFvrq/304933e5-37a0-4199-a5e0-32bab53915a9.png"
+                  alt="IVF Process Illustration"
+                  class="img-fluid rounded shadow"
+                  style="max-width: 100%; height: auto; max-height: 400px; object-fit: contain;"
+                />
+              </div>
+              </div>
+            </div>
+
+            <!-- What You Can Expect from the IVF Process Section -->
+            <div class="mb-5">
+              <h2 class="text-center mb-4" style="color: #5cb3b3">What You Can Expect from the IVF Process</h2>
+              <p class="text-center mb-5">Your IVF journey is personal—and we're here to support you at every step. Here's an overview of what the process typically looks like, so you can feel more prepared and confident moving forward.</p>
+              
+              <div class="timeline-container" style="position: relative; background: linear-gradient(to bottom, rgba(232, 248, 245, 0.3), rgba(209, 242, 235, 0.4), rgba(163, 228, 215, 0.3), rgba(118, 215, 196, 0.2)); padding: 40px 20px; border-radius: 15px; box-shadow: 0 4px 20px rgba(76, 179, 160, 0.05);">
+                <div class="timeline-line" style="position: absolute; left: 60px; top: 80px; bottom: 80px; width: 3px; background: linear-gradient(to bottom, #4cb3a0, #2e8b7a); z-index: 1; border-radius: 2px;"></div>
+              
+              <!-- Consultation & Testing -->
+              <div class="row align-items-center mb-5" style="position: relative; z-index: 2;">
+                <div class="col-md-2 text-center">
+                  <div class="process-icon" style="background: #ffffff; border: 3px solid #4cb3a0; border-radius: 50%; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 15px rgba(76, 179, 160, 0.2);">
+                    <i class="fas fa-clipboard-list" style="font-size: 2.2rem; color: #4cb3a0; stroke-width: 1px;"></i>
+                  </div>
+                </div>
+                <div class="col-md-10 ps-4">
+                  <h4 style="color: #2c5f5a; font-weight: 600; margin-bottom: 12px; font-size: 1.4rem;">Consultation & Testing</h4>
+                  <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1rem;">Your journey begins with a private one-on-one consultation with a fertility specialist. This is where we'll learn about your medical history, discuss your goals, and begin building a plan that's tailored just for you. You'll also complete some testing, including blood work and an ultrasound, to assess hormone levels, ovarian reserve, and reproductive health. This helps us create the most effective and personalized treatment plan.</p>
+                </div>
+              </div>
+
+              <!-- Ovarian Stimulation -->
+              <div class="row align-items-center mb-5" style="position: relative; z-index: 2;">
+                <div class="col-md-2 text-center">
+                  <div class="process-icon" style="background: #ffffff; border: 3px solid #4cb3a0; border-radius: 50%; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 15px rgba(76, 179, 160, 0.2);">
+                    <i class="fas fa-syringe" style="font-size: 2.2rem; color: #4cb3a0; stroke-width: 1px;"></i>
+                  </div>
+                </div>
+                <div class="col-md-10 ps-4">
+                  <h4 style="color: #2c5f5a; font-weight: 600; margin-bottom: 12px; font-size: 1.4rem;">Ovarian Stimulation</h4>
+                  <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1rem;">Next, you'll take hormone medications for about 10-14 days to encourage your ovaries to develop multiple eggs. You'll come in regularly for monitoring so we can track your progress and adjust your medication if needed. We'll be with you every step of the way, making sure you feel informed, supported, and cared for.</p>
+                </div>
+              </div>
+
+              <!-- Egg Retrieval -->
+              <div class="row align-items-center mb-5" style="position: relative; z-index: 2;">
+                <div class="col-md-2 text-center">
+                  <div class="process-icon" style="background: #ffffff; border: 3px solid #4cb3a0; border-radius: 50%; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 15px rgba(76, 179, 160, 0.2);">
+                    <i class="fas fa-microscope" style="font-size: 2.2rem; color: #4cb3a0; stroke-width: 1px;"></i>
+                  </div>
+                </div>
+                <div class="col-md-10 ps-4">
+                  <h4 style="color: #2c5f5a; font-weight: 600; margin-bottom: 12px; font-size: 1.4rem;">Egg Retrieval</h4>
+                  <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1rem;">Once your eggs are ready, you'll come in for a short, minimally invasive procedure under anesthesia. Using ultrasound guidance, your doctor will collect the mature eggs using a thin needle. Most people feel little to no discomfort and are able to go home the same day.</p>
+                </div>
+              </div>
+
+              <!-- Fertilization & Embryo Development -->
+               <div class="row align-items-center mb-5" style="position: relative; z-index: 2;">
+                 <div class="col-md-2 text-center">
+                   <div class="process-icon" style="background: #ffffff; border: 3px solid #4cb3a0; border-radius: 50%; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 15px rgba(76, 179, 160, 0.2);">
+                     <i class="fas fa-dna" style="font-size: 2.2rem; color: #4cb3a0; stroke-width: 1px;"></i>
+                   </div>
+                 </div>
+                 <div class="col-md-10 ps-4">
+                   <h4 style="color: #2c5f5a; font-weight: 600; margin-bottom: 12px; font-size: 1.4rem;">Fertilization & Embryo Development</h4>
+                   <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1rem;">Your eggs will be combined with sperm to create embryos. Over the next few days, our embryologists will monitor their development closely. We'll talk with you about which embryos are progressing and may recommend genetic testing to help determine the best (most) for transfer.</p>
+                 </div>
+               </div>
+
+              <!-- Embryo Transfer -->
+               <div class="row align-items-center mb-5" style="position: relative; z-index: 2;">
+                 <div class="col-md-2 text-center">
+                   <div class="process-icon" style="background: #ffffff; border: 3px solid #4cb3a0; border-radius: 50%; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 15px rgba(76, 179, 160, 0.2);">
+                     <i class="fas fa-heart" style="font-size: 2.2rem; color: #4cb3a0; stroke-width: 1px;"></i>
+                   </div>
+                 </div>
+                 <div class="col-md-10 ps-4">
+                   <h4 style="color: #2c5f5a; font-weight: 600; margin-bottom: 12px; font-size: 1.4rem;">Embryo Transfer</h4>
+                   <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1rem;">A healthy embryo will be selected and gently transferred into your uterus using a thin, soft catheter. This procedure is quick, comfortable, and doesn't require anesthesia. You'll rest for a short time afterward before heading home.</p>
+                 </div>
+               </div>
+
+              <!-- The Two-Week Wait -->
+              <div class="row align-items-center mb-5" style="position: relative; z-index: 2;">
+                <div class="col-md-2 text-center">
+                  <div class="process-icon" style="background: #ffffff; border: 3px solid #4cb3a0; border-radius: 50%; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 15px rgba(76, 179, 160, 0.2);">
+                     <i class="fas fa-calendar-alt" style="font-size: 2.2rem; color: #4cb3a0; stroke-width: 1px;"></i>
+                  </div>
+                </div>
+                <div class="col-md-10 ps-4">
+                  <h4 style="color: #2c5f5a; font-weight: 600; margin-bottom: 12px; font-size: 1.4rem;">The Two-Week Wait</h4>
+                  <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1rem;">This is the time the process can feel the hardest—waiting. For the next couple of weeks, you'll continue taking prescribed hormones and give your body time to support implantation. We know how emotionally this stretch can be, and we're here for you with support and guidance while you wait.</p>
+                </div>
+              </div>
+
+              <!-- Pregnancy Test -->
+              <div class="row align-items-center mb-5" style="position: relative; z-index: 2;">
+                <div class="col-md-2 text-center">
+                  <div class="process-icon" style="background: #ffffff; border: 3px solid #4cb3a0; border-radius: 50%; width: 90px; height: 90px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 15px rgba(76, 179, 160, 0.2);">
+                     <i class="fas fa-vial" style="font-size: 2.2rem; color: #4cb3a0; stroke-width: 1px;"></i>
+                  </div>
+                </div>
+                <div class="col-md-10 ps-4">
+                  <h4 style="color: #2c5f5a; font-weight: 600; margin-bottom: 12px; font-size: 1.4rem;">Pregnancy Test</h4>
+                  <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1rem;">After the two-week wait, it's time for your pregnancy test. If it's positive, we'll celebrate with you and guide you into prenatal care. If it's not the result you were hoping for, we'll talk through the next steps—whether that's trying again or exploring other options. You won't have to face it alone.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Success Rates Section -->
+            <div class="bg-light p-4 rounded mb-5">
+              <div class="row text-center">
+                <div class="col-md-4 mb-3">
+                  <div class="stat-item">
+                    <h3 style="color: #5cb3b3">85%</h3>
+                    <p class="stat-label">Success Rate</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="stat-item">
+                    <h3 style="color: #5cb3b3">2,500+</h3>
+                    <p class="stat-label">IVF Cycles Completed</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="stat-item">
+                    <h3 style="color: #5cb3b3">15+</h3>
+                    <p class="stat-label">Years of Experience</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center">
+              <h3 class="mb-4">Ready to Start Your IVF Journey?</h3>
+              <p class="mb-4">
+                Our experienced team is here to guide you through every step of the IVF process with personalized care and support.
+              </p>
+              <a href="#" class="cta-btn me-3">Schedule Consultation</a>
+              <a href="#" class="btn btn-outline-primary">Learn About Our Process</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5>Adam's Fertility</h5>
+            <p>Leading fertility clinic providing comprehensive reproductive health services with compassionate care.</p>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="Home.html" class="text-white-50">Home</a></li>
+              <li><a href="#" class="text-white-50">About</a></li>
+              <li><a href="#" class="text-white-50">Treatments</a></li>
+              <li><a href="#" class="text-white-50">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <h5>Contact Info</h5>
+            <p class="text-white-50">123 Fertility Street<br>Medical City, MC 12345<br>Phone: (555) 123-4567</p>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+          <p class="mb-0">&copy; 2024 Adam's Fertility. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="accordion-menu" id="accordionMenu">
+      <div class="accordion-header">
+        <img
+          src="https://i.postimg.cc/Xqmqx2tH/logo.png"
+          alt="Adam's Fertility Logo"
+          height="40"
+        />
+      </div>
+
+      <nav class="accordion-nav">
+        <div class="accordion-item">
+          <button class="accordion-toggle" data-target="aboutAccordion">
+            <span>About Us</span>
+            <span class="chevron">&#8250;</span>
+          </button>
+          <div class="accordion-panel" id="aboutAccordion">
+            <a href="#" class="accordion-sublink">Our Story</a>
+            <a href="#" class="accordion-sublink">Our Team</a>
+            <a href="#" class="accordion-sublink">Success Stories</a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-toggle" data-target="treatmentsAccordion">
+            <span>Treatments</span>
+            <span class="chevron">&#8250;</span>
+          </button>
+          <div class="accordion-panel" id="treatmentsAccordion">
+            <div class="accordion-item">
+              <button class="accordion-toggle" data-target="ivfAccordion">
+                <span>IVF</span>
+                <span class="chevron">&#8250;</span>
+              </button>
+              <div class="accordion-panel" id="ivfAccordion">
+                <a href="ivf-basics.html" class="accordion-sublink">Basics</a>
+                <a href="#" class="accordion-sublink">When to Consider IVF</a>
+                <a href="#" class="accordion-sublink">IVF Treatment Process</a>
+              </div>
+            </div>
+
+            <a href="#" class="accordion-sublink">IVF Genetic Testing</a>
+            <a href="#" class="accordion-sublink">ICSI</a>
+            <a href="#" class="accordion-sublink">Embryo Freezing</a>
+            <a href="#" class="accordion-sublink">PCOS</a>
+            <a href="#" class="accordion-sublink">Endometriosis</a>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-toggle" data-target="servicesAccordion">
+            <span>Services</span>
+            <span class="chevron">&#8250;</span>
+          </button>
+          <div class="accordion-panel" id="servicesAccordion">
+            <a href="female-fertility.html" class="accordion-sublink">Female Fertility</a>
+            <a href="male-fertility.html" class="accordion-sublink">Male Fertility</a>
+            <a href="#" class="accordion-sublink">Egg Freezing / Embryo Freezing</a>
+          </div>
+        </div>
+
+        <a href="#" class="accordion-link">Patient Portal</a>
+      </nav>
+
+      <div class="accordion-footer">
+        <a href="#" class="accordion-btn">Book Appointment</a>
+        <div class="accordion-controls">
+          <button class="accordion-theme-toggle" id="accordionThemeToggle">
+            <span class="theme-icon">🌙</span>
+          </button>
+          <button class="accordion-lang-toggle">AR</button>
+        </div>
+        <div class="accordion-contact">
+          <p>Call us: (555) 123-4567</p>
+          <p>Email: info@adamsfertility.com</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Floating Call Button -->
+    <a href="tel:+15551234567" class="floating-call-btn">
+      <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="Home.js"></script>
+  </body>
+</html>
