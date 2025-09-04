@@ -723,7 +723,7 @@ body {
   object-fit: cover;
 }
 
-.why-choose-card:hover .card-image img {
+/* Removing empty ruleset */
   /* Transform effect removed */
 }
 
@@ -837,6 +837,7 @@ body {
 }
 
 .service-card:hover {
+  transform:
   /* Visual effects removed */
 }
 
@@ -1726,6 +1727,9 @@ body {
 }
 
 .fertility-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+}
   /* Visual effects removed */
 }
 
@@ -1835,7 +1839,7 @@ body {
   color: white;
 }
 
-.card-btn svg {
+/* Removing empty ruleset */
   /* Transition effect removed */
 }
 
