@@ -123,8 +123,31 @@ function initAccordionMenu() {
 
 
 
+// Scroll Animation Functionality
+function initScrollAnimations() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, observerOptions);
+  
+  timelineItems.forEach((item) => {
+    observer.observe(item);
+  });
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
   initAccordionMenu();
+  initScrollAnimations();
 });
