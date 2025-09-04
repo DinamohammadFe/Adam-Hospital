@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IVF Genetic Testing - Adam's Fertility</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Home.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="https://i.postimg.cc/FHB1SY09/adam.png"
+            alt="Logo"
+            class="logo-img me-2"
+          />
+          <span class="brand-text">Adam International Hospital</span>
+        </a>
+
+        <div class="d-none d-lg-flex navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="#">Who We Are</a></li>
+                <li><a class="dropdown-item" href="#">Meet the Team</a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Our Advanced Fertility Lab</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Success Stories</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="treatmentDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Treatment
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="treatmentDropdown">
+                <li><a class="dropdown-item" href="#">IVF Basics</a></li>
+                <li><a class="dropdown-item" href="#">Genetic Testing</a></li>
+                <li><a class="dropdown-item" href="#">Female Fertility</a></li>
+                <li><a class="dropdown-item" href="#">Male Fertility</a></li>
+                <li><a class="dropdown-item" href="#">Female Fertility Treatments</a></li>
+                <li><a class="dropdown-item" href="#">Male Fertility Treatments</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="lang-toggle" id="langToggle">EN</button>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="book-btn">Book Appointment</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileNav"
+          aria-controls="mobileNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="collapse navbar-collapse d-lg-none" id="mobileNav">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="mobileAboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="mobileAboutDropdown">
+                <li><a class="dropdown-item" href="#">Who We Are</a></li>
+                <li><a class="dropdown-item" href="#">Meet the Team</a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Our Advanced Fertility Lab</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Success Stories</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="mobileTreatmentDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Treatment
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="mobileTreatmentDropdown">
+                <li><a class="dropdown-item" href="#">IVF Basics</a></li>
+                <li><a class="dropdown-item" href="#">Genetic Testing</a></li>
+                <li><a class="dropdown-item" href="#">Female Fertility</a></li>
+                <li><a class="dropdown-item" href="#">Male Fertility</a></li>
+                <li><a class="dropdown-item" href="#">Female Fertility Treatments</a></li>
+                <li><a class="dropdown-item" href="#">Male Fertility Treatments</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item d-flex align-items-center gap-2 mt-2">
+              <button class="theme-toggle" id="mobileThemeToggle">
+                <i class="fas fa-moon"></i>
+              </button>
+              <button class="lang-toggle" id="mobileLangToggle">EN</button>
+              <a href="#" class="book-btn">Book Appointment</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button
+      class="mobile-menu-toggle d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mobileNav"
+      aria-controls="mobileNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-section"
+      style="
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('https://i.postimg.cc/dQ50MyNC/genetic.jpg') center/cover;
+        padding: 150px 0 100px;
+      "
+    >
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 text-white mb-4">
+              Genetic Testing
+            </h1>
+            <p class="lead text-white mb-4">
+              Advanced genetic screening to ensure the healthiest possible outcomes for your family.
+            </p>
+            <a href="#content" class="cta-btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hospital Information Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <p class="lead text-center mb-0">
+               <strong style="color: #4cb3a0; font-weight: bold;">Adam International Hospital</strong> has a full-service in-house Genetics Laboratory. — Genetics Laboratory capable of performing Genetic Testing on embryos. As part of <strong style="color: #4cb3a0; font-weight: bold;">Adam</strong>'s mission to fulfill dreams of parenthood through the delivery of healthy babies, <strong style="color: #4cb3a0; font-weight: bold;">Adam</strong>'s Genetics Laboratory is equipped with the newest technologies, capable of performing the most up to date genetic testing and is the location of many medical firsts worldwide. With location in Cairo, <strong style="color: #4cb3a0; font-weight: bold;">Adam</strong> is available to help couples throughout Egypt and abroad.
+             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Main Content Section -->
+    <section id="content" class="pt-5" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Introduction -->
+            <div class="mb-5">
+              <h2 class="mb-4" style="color: #4cb3a0;">What is IVF Genetic Testing?</h2>
+              <p class="lead">
+                IVF genetic testing, known as Preimplantation Genetic Testing (PGT), is a specialized procedure performed during in vitro fertilization. A few cells from each embryo are tested to detect genetic or chromosomal issues. This helps doctors select the healthiest embryos for transfer, reducing the risk of miscarriage and inherited conditions. By identifying strong, viable embryos, PGT improves IVF success rates and offers parents peace of mind on their journey to a healthy baby.
+              </p>
+            </div>
+            </div>
+ 
+            </div> <!-- End services-accordion -->
+          </div>
+        </div>
+    </section>
+
+    <!-- Did You Know Section -->
+    <section class="did-you-know-section py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-10">
+            <h2 class="did-you-know-title mb-4">Did You Know?</h2>
+            <p class="did-you-know-text mb-4">
+              Genetic testing can identify over 400 genetic conditions in embryos, significantly reducing the risk of genetic disorders and increasing the chances of a healthy pregnancy?
+            </p>
+            <a href="#" class="schedule-btn">SCHEDULE A CONSULTATION</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <h2 class="mb-4">What we offer</h2>
+            <p class="lead">
+              At Adam International Hospital's Genetics Laboratory, we provide comprehensive genetic testing services to help ensure the healthiest possible outcomes for your family.
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="content-sections">
+                <div class="content-item">
+                  <h3 class="content-headline">Genetic Testing And IVF</h3>
+                  <p class="content-summary">During an IVF cycle, following Egg Retrieval (OPU) and ICSI, when the egg and sperm have fertilized to form an embryo, a few cells are taken from the embryo to be tested in the Genetics Laboratory. The Embryo Transfer takes place after the results of the genetic test are released. Completing Genetic Testing does not alter the duration of treatment.</p>
+                  <button class="expand-toggle" data-target="geneticTestingContent">
+                    <span class="toggle-text">+ More</span>
+                  </button>
+                  <div class="expandable-content" id="geneticTestingContent">
+                    <div class="content-layout">
+                      <div class="content-text">
+                        <p><strong>Family Balancing (Gender Selection):</strong></p>
+                        <p>Screen your embryos to identify the gender and check for chromosomal abnormality such as Down Syndrome.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/4dTXjn2H/pexels-mart-production-7089034.jpg" alt="Genetic Testing Laboratory" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Comprehensive Chromosomal Screening (CCS):</strong></p>
+                        <p>Screen all 24 chromosomes for gender as well as any chromosomal abnormalities caused by missing or additional chromosomes. Chromosomal abnormalities include Trisomy 13 (Patau's syndrome), Trisomy 18 (Edward's syndrome) and Trisomy 21 (Down syndrome). Chromosomal abnormalities are the leading cause of miscarriage.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/mZVKxVmy/images.jpg" alt="PGT Testing Process" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Preimplantation Genetic Diagnosis (PGD):</strong></p>
+                        <p>Targeted testing for specific genetic conditions when there is a known family history of genetic disorders. PGD can detect single gene defects such as cystic fibrosis, sickle cell disease, and Huntington's disease, allowing couples to have healthy children free from inherited genetic conditions.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/Vk3kqzMv/pgt-yontemi-pgd.jpg" alt="PGD Testing Process" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="text-center mt-3">
+                      <button class="expand-toggle secondary" data-target="geneticTestingMoreContent">
+                        +more
+                      </button>
+                    </div>
+                    <div class="expandable-content secondary" id="geneticTestingMoreContent">
+                      <div class="additional-content">
+                        <h4>Advanced Testing Procedures</h4>
+                        <p>Our state-of-the-art laboratory employs cutting-edge technology for comprehensive genetic analysis. We utilize next-generation sequencing and advanced bioinformatics to provide the most accurate results.</p>
+                        <div class="row mt-4">
+                          <div class="col-md-6">
+                            <h5>Testing Timeline</h5>
+                            <ul>
+                              <li>Day 3-5: Embryo biopsy</li>
+                              <li>Day 5-7: Laboratory analysis</li>
+                              <li>Day 7-10: Results available</li>
+                              <li>Day 10+: Embryo transfer</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                            <h5>Success Rates</h5>
+                            <ul>
+                              <li>95% accuracy in detection</li>
+                              <li>40% increase in live birth rates</li>
+                              <li>60% reduction in miscarriage risk</li>
+                              <li>99% embryo survival rate</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-item">
+                  <h3 class="content-headline">Identify & Prevent Hereditary Disease</h3>
+                  <p class="content-summary">Comprehensive screening to prevent transmission of genetic conditions to future generations.</p>
+                  <button class="expand-toggle" data-target="hereditaryDiseaseContent">
+                    <span class="toggle-text">+ More</span>
+                  </button>
+                  <div class="expandable-content" id="hereditaryDiseaseContent">
+                    <div class="content-layout">
+                      <div class="content-text">
+                        <p><strong>Mutation Screening:</strong>
+                         <p>Mutation Screening by Sanger Sequencing is most often recommended when the genetic disease has previously been identified or there is a known family history for a particular genetic disease. Mutation Screening is used to detect genetic diseases caused by a few number of mutations or for detecting mutations in small genes.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/PJ2RHrhM/703082599720fc6affb33c7467bd919971ce02d3.jpg" alt="Carrier Screening Laboratory" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Exome Screening:</strong>
+                         <p>Exome Screening by Next Generation Sequencing is used to screen for unidentified hereditary diseases or polygenic diseases, diseases that usually involve two or more genes interacting. In contrast to current sequencing tests that analyze one gene or small groups of related genes at a time, Exome Screening will analyze important regions of tens of thousands of genes at the same time. Next Generation Sequencing is the new generation of technology that has brought DNA sequencing to an unprecedented speed.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/rmp4b8nT/DNA-helix-magnifying-glass.jpg" alt="Genetic Counseling Session" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Premarital or Preconception Screening:</strong>
+                         <p>Premarital or Preconception Screening is a service for couples who want to ensure that their children will not be at risk of inheriting a genetic disease. Screening may be completed if there is a known hereditary disease in the couple's family history, if there is an unidentified hereditary disease in the couple's family history or if there is there no family history for hereditary disease and the testing is used as an extra precaution.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/pTGWdjf9/toddler-hand-4867454-1280.jpg" alt="Whole Genome Sequencing" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="text-center mt-3">
+                      <button class="expand-toggle secondary" data-target="hereditaryDiseaseMoreContent">
+                        <span class="toggle-text">+ More Details</span>
+                      </button>
+                    </div>
+                    <div class="expandable-content secondary" id="hereditaryDiseaseMoreContent">
+                      <div class="additional-content">
+                        <h4>Comprehensive Carrier Screening</h4>
+                        <p>Our expanded carrier screening panel tests for over 300 genetic conditions, providing couples with comprehensive information about their reproductive risks.</p>
+                        <div class="row mt-4">
+                          <div class="col-md-6">
+                            <h5>Common Conditions Tested</h5>
+                            <ul>
+                              <li>Cystic Fibrosis</li>
+                              <li>Sickle Cell Disease</li>
+                              <li>Tay-Sachs Disease</li>
+                              <li>Fragile X Syndrome</li>
+                              <li>Spinal Muscular Atrophy</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                            <h5>Screening Benefits</h5>
+                            <ul>
+                              <li>Early risk identification</li>
+                              <li>Informed family planning</li>
+                              <li>Reduced anxiety during pregnancy</li>
+                              <li>Personalized genetic counseling</li>
+                              <li>Treatment planning options</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-item">
+                  <h3 class="content-headline">Genetic Testing During Pregnancy</h3>
+                  <p class="content-summary">Early detection of genetic conditions for informed pregnancy management.</p>
+                  <button class="expand-toggle" data-target="pregnancyTestingContent">
+                    <span class="toggle-text">+ More</span>
+                  </button>
+                  <div class="expandable-content" id="pregnancyTestingContent">
+                    <div class="content-layout">
+                      <div class="content-text">
+                        <p><strong>Non-Invasive Prenatal Testing (NIPT):</strong></p>
+                        <p>Non-invasive prenatal testing is a screening test that analyzes fetal DNA circulating in the mother's blood to assess the risk of certain chromosomal conditions. NIPT can be performed as early as 10 weeks of pregnancy and provides highly accurate results for conditions like Down syndrome, Edwards syndrome, and Patau syndrome.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/Mp2QxkZC/Genomic-Testing-New-Port-Richey.jpg" alt="Non-Invasive Prenatal Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="content-layout mt-4">
+                      <div class="content-text">
+                        <p><strong>Products of Conception (POC):</strong>
+                        <p>Fetal loss is the most common pregnancy complication, occurring in 25-30% of recognized pregnancies. Chromosomal analysis on Products of Conception may help identify the cause of pregnancy loss and improve management of future pregnancies by considering Assisted Reproductive Techniques and Comprehensive Chromosomal Screening to avoid the recurrence of miscarriages.</p>
+                      </div>
+                      <div class="content-image">
+                        <img src="https://i.postimg.cc/YqmWJ27N/Mapping-genom.jpg" alt="Diagnostic Testing" style="width: 100%; height: 200px; object-fit: cover;">
+                      </div>
+                    </div>
+                    <div class="text-center mt-3">
+                      <button class="expand-toggle secondary" data-target="pregnancyTestingMoreContent">
+                        <span class="toggle-text">+ More Details</span>
+                      </button>
+                    </div>
+                    <div class="expandable-content secondary" id="pregnancyTestingMoreContent">
+                      <div class="additional-content">
+                        <h4>Prenatal Testing Options</h4>
+                        <p>Our comprehensive prenatal testing program offers both screening and diagnostic options to monitor fetal development and detect potential genetic conditions throughout pregnancy.</p>
+                        <div class="row mt-4">
+                          <div class="col-md-6">
+                            <h5>Testing Timeline</h5>
+                            <ul>
+                              <li>10-13 weeks: NIPT screening</li>
+                              <li>11-14 weeks: NT scan</li>
+                              <li>15-20 weeks: Quad screen</li>
+                              <li>15-20 weeks: Amniocentesis</li>
+                              <li>18-22 weeks: Anatomy scan</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-6">
+                            <h5>Detection Capabilities</h5>
+                            <ul>
+                              <li>Down syndrome (Trisomy 21)</li>
+                              <li>Edwards syndrome (Trisomy 18)</li>
+                              <li>Patau syndrome (Trisomy 13)</li>
+                              <li>Neural tube defects</li>
+                              <li>Sex chromosome abnormalities</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section id="content" class="pt-5" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <!-- Benefits -->
+            <div class="mb-5">
+              <ul class="list-unstyled">
+
+              </ul>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mb-5">
+              <h2 class="mb-4">Ready to Learn More About Genetic Testing?</h2>
+              <p class="lead mb-4">
+                Our genetic counselors and fertility specialists are here to guide you 
+                through every step of the process.
+              </p>
+              <a href="#" class="schedule-btn">Schedule Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5>Adam International Hospital</h5>
+            <p>Leading fertility care with compassionate treatment and advanced technology.</p>
+          </div>
+          <div class="col-lg-2 mb-4">
+            <h6>Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white-50">Home</a></li>
+              <li><a href="#" class="text-white-50">About</a></li>
+              <li><a href="#" class="text-white-50">Treatments</a></li>
+              <li><a href="#" class="text-white-50">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h6>Treatments</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white-50">IVF Basics</a></li>
+              <li><a href="#" class="text-white-50">Genetic Testing</a></li>
+              <li><a href="#" class="text-white-50">Female Fertility</a></li>
+              <li><a href="#" class="text-white-50">Male Fertility</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4">
+            <h6>Contact Info</h6>
+            <p class="text-white-50 mb-1">20 Adan st. from Shebab St. Al Mouhandeseen</p>
+                        <p class="text-white-50 mb-1">Giza</p>
+                        <p class="text-white-50 mb-1">Egypt</p>
+                        <p class="text-white-50 mb-1">Phone: 16692</p>
+                        <p class="text-white-50">Email: info@adamhospital.com</p>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2024 Adam International Hospital. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+            <a href="#" class="text-white-50">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" crossorigin="anonymous"></script>
+    
+    <!-- Expandable Content Styles -->
+     <style>
+       .content-sections {
+         display: flex;
+         flex-direction: column;
+         gap: 2rem;
+       }
+       
+       .content-item {
+          background: linear-gradient(135deg, rgba(76, 179, 160, 0.95) 0%, rgba(45, 138, 122, 0.95) 100%);
+          border-radius: 20px;
+          padding: 2.5rem;
+          color: white;
+          max-width: 1000px;
+          margin-left: auto;
+          margin-right: auto;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .content-item::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        }
+       
+       .content-item:hover {
+         /* Visual effects removed */
+       }
+       
+       .content-item:hover::before {
+         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+       }
+       
+       .content-headline {
+         font-size: 1.5rem;
+         font-weight: 600;
+         margin-bottom: 1rem;
+         color: white;
+       }
+       
+       .content-summary {
+         font-size: 1.1rem;
+         margin-bottom: 1.5rem;
+         opacity: 0.9;
+       }
+       
+       .expand-toggle {
+         background: rgba(255, 255, 255, 0.15);
+         border: 2px solid rgba(255, 255, 255, 0.25);
+         color: white;
+         padding: 0.75rem 2rem;
+         border-radius: 30px;
+         cursor: pointer;
+         font-weight: 600;
+         letter-spacing: 0.5px;
+         backdrop-filter: blur(5px);
+         position: relative;
+         overflow: hidden;
+         font-weight: 500;
+       }
+       
+       .expand-toggle:hover {
+         background: rgba(255, 255, 255, 0.25);
+         border-color: rgba(255, 255, 255, 0.4);
+       }
+       
+       .expand-toggle:active {
+         /* Transform effect removed */
+       }
+       
+       .expandable-content {
+         max-height: 0;
+         overflow: hidden;
+         margin-top: 2rem;
+         opacity: 0;
+       }
+       
+       .expand-toggle.secondary {
+         background: rgba(76, 179, 160, 0.2);
+         border: 2px solid rgba(76, 179, 160, 0.4);
+         color: #4cb3a0;
+         padding: 0.5rem 1.5rem;
+         font-size: 0.9rem;
+         margin-top: 1rem;
+       }
+       
+       .expand-toggle.secondary:hover {
+         background: rgba(76, 179, 160, 0.3);
+         border-color: rgba(76, 179, 160, 0.6);
+         color: white;
+       }
+       
+       .expandable-content.secondary {
+         margin-top: 1rem;
+         background: rgba(255, 255, 255, 0.05);
+         border-radius: 15px;
+         padding: 0;
+       }
+       
+       .additional-content {
+         padding: 2rem;
+         color: white;
+       }
+       
+       .additional-content h4 {
+         color: #4cb3a0;
+         margin-bottom: 1rem;
+         font-weight: 600;
+       }
+       
+       .additional-content h5 {
+         color: white;
+         margin-bottom: 0.75rem;
+         font-weight: 500;
+       }
+       
+       .additional-content ul {
+         list-style: none;
+         padding-left: 0;
+       }
+       
+       .additional-content li {
+         padding: 0.25rem 0;
+         position: relative;
+         padding-left: 1.5rem;
+       }
+       
+       .additional-content li::before {
+         content: '✓';
+         position: absolute;
+         left: 0;
+         color: #4cb3a0;
+         font-weight: bold;
+       }
+       
+       .expandable-content.show {
+         max-height: 2000px;
+         opacity: 1;
+         margin-top: 1.5rem;
+         padding-top: 1.5rem;
+         border-top: 1px solid rgba(255, 255, 255, 0.3);
+       }
+       
+       .expandable-content::before {
+         content: '';
+         display: block;
+         height: 1px;
+         background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+         margin-bottom: 1.5rem;
+       }
+       
+       .expandable-content p {
+         margin-bottom: 1rem;
+         line-height: 1.6;
+       }
+       
+       .expandable-content ul {
+         list-style: none;
+         padding-left: 0;
+       }
+       
+       .expandable-content li {
+         padding: 0.5rem 0;
+         padding-left: 1.5rem;
+         position: relative;
+       }
+       
+       .expandable-content li:before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          color: #4cb3a0;
+          font-weight: bold;
+        }
+        
+        .content-layout {
+          display: flex;
+          gap: 2rem;
+          align-items: flex-start;
+        }
+        
+        .content-text {
+          flex: 1;
+        }
+        
+        .content-image {
+          flex: 0 0 300px;
+          background: rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 20px;
+        }
+        
+        .content-image img {
+          width: 100%;
+          height: auto;
+        }
+        
+        .content-image svg {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        
+        @media (max-width: 768px) {
+          .content-layout {
+            flex-direction: column;
+          }
+          
+          .content-image {
+            flex: none;
+          }
+        }
+     </style>
+    
+    <!-- Expandable Content JavaScript -->
+     <script>
+       document.addEventListener('DOMContentLoaded', function() {
+         const expandToggles = document.querySelectorAll('.expand-toggle');
+         
+         expandToggles.forEach(toggle => {
+           toggle.addEventListener('click', function(e) {
+             e.preventDefault();
+             const targetId = this.getAttribute('data-target');
+             const content = document.getElementById(targetId);
+             const toggleText = this.querySelector('.toggle-text');
+             const isSecondary = this.classList.contains('secondary');
+             
+             if (!content || !toggleText) {
+               return;
+             }
+             
+             if (content.classList.contains('show')) {
+               content.classList.remove('show');
+               if (isSecondary) {
+                 toggleText.textContent = '+ More Details';
+               } else {
+                 toggleText.textContent = '+ More';
+               }
+             } else {
+               content.classList.add('show');
+               if (isSecondary) {
+                 toggleText.textContent = '- Less Details';
+               } else {
+                 toggleText.textContent = '- Less';
+               }
+             }
+           });
+         });
+       });
+     </script>
+  </body>
+</html>
