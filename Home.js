@@ -251,6 +251,47 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Accordion dropdown toggles
+  const accordionDropdownBtns = document.querySelectorAll(".accordion-dropdown-btn");
+  accordionDropdownBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const dropdown = this.parentElement;
+      const isActive = dropdown.classList.contains("active");
+      
+      // Close all other dropdowns
+      document.querySelectorAll(".accordion-dropdown.active").forEach((activeDropdown) => {
+        if (activeDropdown !== dropdown) {
+          activeDropdown.classList.remove("active");
+        }
+      });
+      
+      // Toggle current dropdown
+      dropdown.classList.toggle("active", !isActive);
+    });
+  });
+
+  // Accordion nested dropdown toggles
+  const accordionNestedBtns = document.querySelectorAll(".accordion-nested-btn");
+  accordionNestedBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const nestedDropdown = this.parentElement;
+      const isActive = nestedDropdown.classList.contains("active");
+      
+      // Close all other nested dropdowns in the same parent
+      const parentDropdown = nestedDropdown.closest(".accordion-dropdown-content");
+      if (parentDropdown) {
+        parentDropdown.querySelectorAll(".accordion-nested-dropdown.active").forEach((activeNested) => {
+          if (activeNested !== nestedDropdown) {
+            activeNested.classList.remove("active");
+          }
+        });
+      }
+      
+      // Toggle current nested dropdown
+      nestedDropdown.classList.toggle("active", !isActive);
+    });
+  });
+
   // Regular accordion links (close menu when clicked)
   const accordionLinks = document.querySelectorAll(
     ".accordion-link, .accordion-sublink"
