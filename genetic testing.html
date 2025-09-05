@@ -54,21 +54,148 @@
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
-                id="treatmentDropdown"
+                id="treatmentsDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Treatment
+                Treatments
               </a>
-              <ul class="dropdown-menu" aria-labelledby="treatmentDropdown">
-                <li><a class="dropdown-item" href="#">IVF Basics</a></li>
-                <li><a class="dropdown-item" href="#">Genetic Testing</a></li>
+              <ul class="dropdown-menu" aria-labelledby="treatmentsDropdown">
+                <li>
+                  <a class="dropdown-item" href="IVF.html">
+                    IVF
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="genetic testing.html">Genetic Testing</a>
+                </li>
+                <li><a class="dropdown-item" href="IVF-ICSI.htm">ICSI</a></li>
                 <li><a class="dropdown-item" href="embryo-freezing.html">Embryo Freezing</a></li>
-                <li><a class="dropdown-item" href="#">Female Fertility</a></li>
-                <li><a class="dropdown-item" href="#">Male Fertility</a></li>
-                <li><a class="dropdown-item" href="#">Female Fertility Treatments</a></li>
-                <li><a class="dropdown-item" href="#">Male Fertility Treatments</a></li>
+                <li><a class="dropdown-item" href="#">PCOS</a></li>
+                <li><a class="dropdown-item" href="#">Endometriosis</a></li>
+                <li><a class="dropdown-item" href="#">Tubal Reversal</a></li>
+                <li><a class="dropdown-item" href="#">Sex Selection</a></li>
+                <li><a class="dropdown-item" href="#">Gyn Surgery</a></li>
+                <li><a class="dropdown-item" href="#">TESE</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li class="nav-item dropdown">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    href="#"
+                    id="femaleFertilityDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Female Fertility
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="femaleFertilityDropdown"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="female-fertility.html"
+                        >Female Fertility Diagnosis</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="female-fertility-treatments.html"
+                        >Female Fertility Treatments</a
+                      >
+                    </li>
+                    <li><a class="dropdown-item" href="#">Egg Freezing</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    href="#"
+                    id="maleFertilityDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Male Fertility
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="maleFertilityDropdown"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="male-fertility.html"
+                        >Male Fertility Diagnosis</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="male-fertility-treatments.html"
+                        >Male Fertility Treatments</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Sperm Freezing</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    href="#"
+                    id="fertilityPreservationDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Fertility Preservation
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="fertilityPreservationDropdown"
+                  >
+                    <li><a class="dropdown-item" href="#">Egg Freezing</a></li>
+                    <li><a class="dropdown-item" href="#">Sperm Freezing</a></li>
+                    <li><a class="dropdown-item" href="#">Embryo Freezing</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    href="#"
+                    id="supplementaryServicesDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Supplementary Services
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="supplementaryServicesDropdown"
+                  >
+                    <li><a class="dropdown-item" href="#">Psychological Support</a></li>
+                    <li><a class="dropdown-item" href="#">Nutrition</a></li>
+                    <li><a class="dropdown-item" href="#">Urology-Haematology-Immunology</a></li>
+                  </ul>
+                </li>
+
               </ul>
             </li>
             <li class="nav-item">
@@ -593,7 +720,7 @@
           background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
         }
        
-       .content-item:hover {
+/* Remove empty ruleset */
          /* Visual effects removed */
        }
        
